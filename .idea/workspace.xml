@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ddb8331-8e39-4fe9-81ef-470ffbb5c807" name="Changes" comment="Rename `Main` to `Taschenrechner` and update references.&#10;&#10;The main class has been renamed to `Taschenrechner` for better clarity and consistency. Updated all references in code, README files, and JSON configurations accordingly.">
-      <change beforePath="$PROJECT_DIR$/solution" beforeDir="false" afterPath="$PROJECT_DIR$/solution" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/solution/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solution/src/Taschenrechner.java" beforeDir="false" afterPath="$PROJECT_DIR$/solution/src/Taschenrechner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template" beforeDir="false" afterPath="$PROJECT_DIR$/template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests" beforeDir="false" afterPath="$PROJECT_DIR$/tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/test/TestManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test/test/TestManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/test/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test/test/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/wrappers/TaschenrechnerWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test/wrappers/TaschenrechnerWrapper.java" afterDir="false" />
-    </list>
+    <list default="true" id="4ddb8331-8e39-4fe9-81ef-470ffbb5c807" name="Changes" comment="Add configuration files for compiler, encodings, jar repositories, and workspace" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +21,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -124,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1773354798886</updated>
       <workItem from="1773354801096" duration="1256000" />
-      <workItem from="1773846868899" duration="348000" />
+      <workItem from="1773846868899" duration="1385000" />
     </task>
     <task id="LOCAL-00001" summary="Rename `Main` to `Taschenrechner` and update references.&#10;&#10;The main class has been renamed to `Taschenrechner` for better clarity and consistency. Updated all references in code, README files, and JSON configurations accordingly.">
       <option name="closed" value="true" />
@@ -134,12 +126,47 @@
       <option name="project" value="LOCAL" />
       <updated>1773355195533</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add 'potenzieren' method and corresponding tests to TaschenrechnerWrapper">
+      <option name="closed" value="true" />
+      <created>1773847258513</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1773847258514</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update README and add power method to Taschenrechner class">
+      <option name="closed" value="true" />
+      <created>1773847270602</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1773847270602</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add configuration files for compiler, encodings, jar repositories, and workspace">
+      <option name="closed" value="true" />
+      <created>1773847305711</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1773847305711</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add configuration files for compiler, encodings, jar repositories, and workspace">
+      <option name="closed" value="true" />
+      <created>1773847336148</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1773847336148</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rename `Main` to `Taschenrechner` and update references.&#10;&#10;The main class has been renamed to `Taschenrechner` for better clarity and consistency. Updated all references in code, README files, and JSON configurations accordingly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename `Main` to `Taschenrechner` and update references.&#10;&#10;The main class has been renamed to `Taschenrechner` for better clarity and consistency. Updated all references in code, README files, and JSON configurations accordingly." />
+    <MESSAGE value="Add 'potenzieren' method and corresponding tests to TaschenrechnerWrapper" />
+    <MESSAGE value="Update README and add power method to Taschenrechner class" />
+    <MESSAGE value="Add configuration files for compiler, encodings, jar repositories, and workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add configuration files for compiler, encodings, jar repositories, and workspace" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
