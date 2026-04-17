@@ -16,7 +16,7 @@ jobs:
         include:
           - target: solution
             pom_file: pom_solution.xml
-            maven_args: -Dbuildhelper.addsource.skip=true -Dmaven.test.failure.ignore=true
+            maven_args: -Dbuildhelper.addsource.skip=true
           - target: template
             pom_file: pom_template.xml
             maven_args: ''
