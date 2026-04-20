@@ -8,7 +8,7 @@
 ## Abstract
 
 <!-- START Adjust for exercise -->
-< Insert a short abstract about the exercise to help teachers choose.>
+TODO: Insert a short abstract about the exercise to help teachers choose. Explicitly mention the applied concepts and the diffcult level for students.
 <!-- END Adjust for exercise -->
 
 Detailed exercise instructions can be found in the README file of the template repository.
