@@ -50,7 +50,7 @@ jobs:
 
       - name: Run template tests for overview
         continue-on-error: true
-        run: mvn -B -f tests/pom_template.xml clean test
+        run: mvn -B -f tests/pom_template.xml -Dmaven.test.failure.ignore=true clean test
 
       - name: Save template reports
         if: always()

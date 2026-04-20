@@ -30,6 +30,43 @@ def update_case_status(results, case_id, status, priority):
         results[case_id] = status
 
 
+def split_results_by_scope(results):
+    class_level = {}
+    case_level = {}
+    priority = {"❌": 3, "⏭️": 2, "✅": 1}
+
+    for case_id, status in results.items():
+        if case_id.endswith("."):
+            class_name = case_id[:-1]
+            if not class_name:
+                continue
+            prev = class_level.get(class_name)
+            if prev is None or priority[status] > priority[prev]:
+                class_level[class_name] = status
+            continue
+        case_level[case_id] = status
+
+    return case_level, class_level
+
+
+def propagate_class_level_to_cases(case_results, class_results, target_case_ids):
+    priority = {"❌": 3, "⏭️": 2, "✅": 1}
+
+    for case_id in target_case_ids:
+        if "." not in case_id:
+            continue
+        class_name = case_id.rsplit(".", 1)[0]
+        class_status = class_results.get(class_name)
+        if class_status is None:
+            continue
+
+        prev = case_results.get(case_id)
+        if prev is None or priority[class_status] > priority[prev]:
+            case_results[case_id] = class_status
+
+    return case_results
+
+
 def parse_report_dir(report_dir):
     # Status precedence: failed/error > skipped > passed
     priority = {"❌": 3, "⏭️": 2, "✅": 1}
@@ -50,7 +87,24 @@ def parse_report_dir(report_dir):
 
 
 def build_table(solution_results, template_results):
-    all_cases = sorted(set(solution_results.keys()) | set(template_results.keys()))
+    solution_cases, solution_class = split_results_by_scope(solution_results)
+    template_cases, template_class = split_results_by_scope(template_results)
+
+    base_cases = sorted(set(solution_cases.keys()) | set(template_cases.keys()))
+    solution_cases = propagate_class_level_to_cases(solution_cases, solution_class, base_cases)
+    template_cases = propagate_class_level_to_cases(template_cases, template_class, base_cases)
+
+    all_cases = sorted(set(solution_cases.keys()) | set(template_cases.keys()))
+
+    if not all_cases and (solution_class or template_class):
+        all_classes = sorted(set(solution_class.keys()) | set(template_class.keys()))
+        for class_name in all_classes:
+            pseudo_case = f"{class_name}.*"
+            if class_name in solution_class:
+                solution_cases[pseudo_case] = solution_class[class_name]
+            if class_name in template_class:
+                template_cases[pseudo_case] = template_class[class_name]
+        all_cases = sorted(set(solution_cases.keys()) | set(template_cases.keys()))
 
     lines = [
         "## Test Case Overview",
@@ -64,8 +118,8 @@ def build_table(solution_results, template_results):
     ]
 
     for case_id in all_cases:
-        sol = solution_results.get(case_id, "—")
-        tpl = template_results.get(case_id, "—")
+        sol = solution_cases.get(case_id, "—")
+        tpl = template_cases.get(case_id, "—")
         lines.append(f"| {case_id} | {sol} | {tpl} |")
 
     if not all_cases:
