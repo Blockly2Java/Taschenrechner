@@ -11,8 +11,8 @@ jobs:
     name: Update README test overview
     runs-on: ubuntu-latest
     env:
-      GITHUB_PACKAGES_USERNAME: ${{ github.actor }}
-      GITHUB_PACKAGES_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_PACKAGES_USERNAME: ${{ secrets.GITHUB_PACKAGES_USERNAME }}
+      GITHUB_PACKAGES_TOKEN: ${{ secrets.GITHUB_PACKAGES_TOKEN }}
 
     steps:
       - name: Checkout repository
