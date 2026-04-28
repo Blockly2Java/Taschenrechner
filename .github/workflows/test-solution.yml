@@ -10,6 +10,9 @@ jobs:
   test-solution:
     name: Test solution
     runs-on: ubuntu-latest
+    env:
+      GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
+      GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
     steps:
       - name: Checkout repository
@@ -43,6 +46,22 @@ jobs:
           distribution: temurin
           java-version: '17'
           cache: maven
+
+      - name: Configure Maven settings
+        run: |
+          mkdir -p ~/.m2
+          cat > ~/.m2/settings.xml << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <settings>
+            <servers>
+              <server>
+                <id>github</id>
+                <username>${env.GH_PACKAGES_USERNAME}</username>
+                <password>${env.GH_PACKAGES_TOKEN}</password>
+              </server>
+            </servers>
+          </settings>
+          EOF
 
       - name: Run solution tests
         run: mvn -B -f tests/pom_solution.xml -Dbuildhelper.addsource.skip=true clean test

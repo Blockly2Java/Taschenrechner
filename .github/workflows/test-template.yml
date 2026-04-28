@@ -10,6 +10,9 @@ jobs:
   test-template:
     name: Test template
     runs-on: ubuntu-latest
+    env:
+      GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
+      GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
 
     steps:
       - name: Checkout repository
