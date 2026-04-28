@@ -1,7 +1,7 @@
-name: Template Tests
+name: Template Tests (manual trigger)
 
 on:
-  push:
+  workflow_dispatch:
 
 permissions:
   contents: read

@@ -1,10 +1,5 @@
 # Empty
 
-<!-- START Adjust URL -->
-![Solution passing all tests](https://img.shields.io/github/actions/workflow/status/Blockly2Java/Empty/test-solution.yml?branch=main&label=Solution%20passing%20all%20tests)
-![Template compiling successfully](https://img.shields.io/github/actions/workflow/status/Blockly2Java/Empty/test-template.yml?branch=main&label=Template%20compiling%20successfully)
-<!-- END Adjust URL -->
-
 ## Abstract
 
 <!-- START Adjust for exercise -->
