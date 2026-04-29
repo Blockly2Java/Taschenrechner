@@ -13,19 +13,13 @@ Detailed exercise instructions can be found in the README file of the template r
 
 Auto-updated by CI from latest test runs.
 <!-- markdownlint-disable-next-line MD033 -->
-> <sub>Last Updated: 28. Apr 2026 14:31:34 [CEST]</sub>
+> <sub>Last Updated: 29. Apr 2026 13:13:12 [CEST]</sub>
 <!-- markdownlint-disable-next-line MD033 -->
-> <sub>Commit: bb685f87ee4e416c38eb9c51b7d88975a536d4fd</sub>
+> <sub>Commit: 441e7fd9a84ff3df2ca48e6584eccec8b1a82c11</sub>
 
 Legend: ✅ passed, ❌ failed/error, ⏭️ skipped, — not present.
 
 | Test Case | Solution | Template |
 | --- | --- | --- |
-| test.TestManager.strukturTests | ✅ | ❌ |
-| test.TestManager.testAddieren | ✅ | ❌ |
-| test.TestManager.testDividieren | ✅ | ❌ |
-| test.TestManager.testMittelwert | ✅ | ❌ |
-| test.TestManager.testMultiplizieren | ✅ | ❌ |
-| test.TestManager.testPotenzieren | ✅ | ❌ |
-| test.TestManager.testSubtrahieren | ✅ | ❌ |
+| (no test results found) | — | — |
 <!-- TEST_OVERVIEW_END -->
