@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_PACKAGES_USERNAME: ${{ secrets.GH_PACKAGES_USERNAME }}
-      GH_PACKAGES_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}
+      GH_PACKAGES_TOKEN: ${{ secrets.GH_TOKEN }}
 
     steps:
       - name: Checkout repository
